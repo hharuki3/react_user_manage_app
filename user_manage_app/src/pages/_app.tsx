@@ -1,6 +1,10 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import { Button, ChakraProvider } from "@chakra-ui/react";
+import theme from "../theme/theme";
+export default function App() {
+  return (
+    <ChakraProvider theme={theme}>
+      <Button colorScheme="teal">ボタン</Button>
+    </ChakraProvider>
+  );
 }
