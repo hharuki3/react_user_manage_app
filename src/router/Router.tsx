@@ -5,20 +5,19 @@ import { HomeRoutes } from "./HomeRoutes";
 
 export const Router: FC = memo(() => {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-      </Routes>
-      <Route
-        path="/home"
-        render={() => (
+        <Route path="/home" element={
           <Routes>
             {HomeRoutes.map((props) => (
-              <Route key={props.path}>{props.children}</Route>
+              <Route key={props.path} path={props.path} element={props.children}/>
             ))}
           </Routes>
-        )}
+        }
       />
-    </BrowserRouter>
+      </Routes>
+
+    // </BrowserRouter>
   );
 });

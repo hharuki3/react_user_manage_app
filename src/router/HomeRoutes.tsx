@@ -5,17 +5,17 @@ import Home from "@/pages";
 export const HomeRoutes = [
   {
     path: "/",
-    exact: true,
+    // exact: true, #react-router-dom v6ではexactは指定しない
     children: <Home />,
   },
   {
     path: "user_management",
-    exact: false,
+    // exact: false,
     children: <UserManagement />,
   },
   {
     path: "/setting",
-    exact: false,
+    // exact: false,
     children: <Setting />,
   },
 ];
