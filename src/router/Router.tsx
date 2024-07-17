@@ -10,7 +10,7 @@ export const Router: FC = memo(() => {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route
-        path="/home"
+        path="/home/*"
         element={
           <Routes>
             {HomeRoutes.map((route) => (
