@@ -1,5 +1,5 @@
 import { Box, Stack, Image, Text } from "@chakra-ui/react";
-import { FC, memo, ReactNode } from "react";
+import { FC, memo } from "react";
 
 type Props = {
   imageUrl: string;
